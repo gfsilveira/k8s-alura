@@ -10,7 +10,7 @@ services:
             - /home/ubuntu/projeto/volume_mysql:/var/lib/mysql
     web:
         image: gfsilveira/k8s-alura:v1
-        ports: :
+        ports:
             - 8080:80
         depends_on: 
             - db
