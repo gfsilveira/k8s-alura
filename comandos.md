@@ -6,12 +6,6 @@
 ''' sh
 $ aws configure
 '''
-
-#### User -> AKIA4A3V2HUFWA377SOH
-#### Key -> nhsMS640HDVl6lbsi3r9vG8x468Gy68dvqupoUFG
-#### Zone -> us-east-1
-#### Format -> json
-
 ## Criar a VPC via CloudFormation
 
 	https://s3.us-west-2.amazonaws.com/amazon-eks/cloudformation/2020-10-29/amazon-eks-vpc-sample.yaml

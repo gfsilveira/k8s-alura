@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: aplicacao
+  # labels:
+  #   name: aplicacao
+spec:
+  containers:
+  - name: container-aplicacao-loja
+    image: gfsilveira/k8s-alura:v1
+    # resources:
+    #   limits:
+    #     memory: "128Mi"
+    #     cpu: "500m"
+    ports:
+      - containerPort: 80
