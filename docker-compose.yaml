@@ -9,4 +9,8 @@ services:
         volumes: 
             - /home/ubuntu/projeto/volume_mysql:/var/lib/mysql
     web:
-        image: php
+        image: gfsilveira/k8s:v1
+        ports: :
+            - 8080:80
+        depends_on: 
+            - db

@@ -5,4 +5,3 @@ RUN docker-php-exe-install mysqli
 COPY /loja /var/www/html
 
 EXPOSE 80
-
