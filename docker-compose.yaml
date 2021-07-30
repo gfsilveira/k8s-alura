@@ -9,7 +9,7 @@ services:
         volumes: 
             - /home/ubuntu/k8s-alura/volume_mysql:/var/lib/mysql
     web:
-        image: gfsilveira/k8s-php:v1
+        image: gfsilveira/k8s-v1:php
         ports:
             - 8080:80
         depends_on: 
