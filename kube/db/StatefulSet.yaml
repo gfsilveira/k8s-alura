@@ -1,16 +1,22 @@
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: statefulset-mysql
+  labels:
+    app: mysql
 spec:
+  selector:
+    matchLabels:
+      app: mysql
+  serviceName: db
   template:
     metadata:
       labels:
-        name: mysql
+        app: mysql
     spec:
       containers:
         - name: container-mysql
-          image: gfsilveira/k8s-v1:mysql
+          image: mysql:5.7.19
           ports:
             - containerPort: 3306 # Padrão mysql. NÃO MUDAR
           env:
@@ -22,6 +28,8 @@ spec:
               value: "1" # "1" é o mesmo que TRUE
           volumeMounts:
             - name: volume-mysql
-              mountPath: /var/lib/mysql # diretório padrão dentor do mysql
+              mountPath: /var/lib/minesql # diretório padrão dentro do mysql
       volumes:
           - name: volume-mysql
+            persistentVolumeClaim:
+              claimName: configuracao-mysql
