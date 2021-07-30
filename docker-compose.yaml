@@ -7,9 +7,9 @@ services:
             - MYSQL_USER=root
             - MYSQL_ALLOW_EMPTY_PASSWORD=yes
         volumes: 
-            - /home/ubuntu/projeto/volume_mysql:/var/lib/mysql
+            - /home/ubuntu/k8s-alura/volume_mysql:/var/lib/mysql
     web:
-        image: gfsilveira/k8s-alura:v1
+        image: gfsilveira/k8s-php:v1
         ports:
             - 8080:80
         depends_on: 
