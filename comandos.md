@@ -91,7 +91,7 @@ $ kubectl proxy
 '''
 
 Com o proxy funcionando, acessar o dashboard pelo link
--> http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/.
+-> http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
 
 Usando o token, abrir um proxy. Isso bloqueia o terminal
 

@@ -1,7 +1,7 @@
 version: "3.0"
 services: 
     db:
-        image: mysql:5.7.19
+        image: gfsilveira/k8s-v1:mysql
         environment: 
             - MYSQL_DATABASE=loja
             - MYSQL_USER=root

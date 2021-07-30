@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
   - name: container-aplicacao-loja
-    image: gfsilveira/k8s-alura:v1
+    image: gfsilveira/k8s-v1:php
     # resources:
     #   limits:
     #     memory: "128Mi"

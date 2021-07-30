@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: container-aplicacao-loja
-        image: rafanercessian/aplicacao-loja:v1
+        image: gfsilveira/k8s-v1:php
         ports:
         - containerPort: 80

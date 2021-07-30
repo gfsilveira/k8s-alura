@@ -1,0 +1,27 @@
+apiVersion: apps/v1beta1
+kind: StatefulSet
+metadata:
+  name: statefulset-mysql
+spec:
+  template:
+    metadata:
+      labels:
+        name: mysql
+    spec:
+      containers:
+        - name: container-mysql
+          image: gfsilveira/k8s-v1:mysql
+          ports:
+            - containerPort: 3306 # Padrão mysql. NÃO MUDAR
+          env:
+            - name: MYSQL_DATABASE
+              value: "loja"
+            - name: MYSQL_USER
+              value: "root"
+            - name: MYSQL_ALLOW_EMPTY_PASSWORD
+              value: "1" # "1" é o mesmo que TRUE
+          volumeMounts:
+            - name: volume-mysql
+              mountPath: /var/lib/mysql # diretório padrão dentor do mysql
+      volumes:
+          - name: volume-mysql

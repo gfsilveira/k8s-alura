@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mysql
+spec:
+  containers:
+    - name: container-mysql
+      image: gfsilveira/k8s-v1:mysql
+      ports:
+        - containerPort: 3306 # Padrão mysql. NÃO MUDAR
+      env:
+        - name: MYSQL_DATABASE
+          value: "loja"
+        - name: MYSQL_USER
+          value: "root"
+        - name: MYSQL_ALLOW_EMPTY_PASSWORD
+          value: "1" # "1" é o mesmo que TRUE
